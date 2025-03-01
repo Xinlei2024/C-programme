@@ -1,6 +1,6 @@
 CFLAGS=-Wall -g
-all：
-	EX0 EX3
+all:
+	ex4
+
 clean:
-	rm -f EX0 
-	rm -f EX3
+	rm -f EX0 EX3
