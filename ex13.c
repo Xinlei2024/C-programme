@@ -10,9 +10,14 @@ int main(int argc, char *argv[]){
 
 	//int i = 0;
 	char letter = '\0';
-	for (int arg = 1; arg < argc; arg++){
-	for(int i = 0,letter = '\0'; argv[arg][i] != '\0',letter = argv[arg][i]; i++){
-	//char letter = argv[1][i];
+	char **cur_argv = argv + 1;
+	//int count = 0;
+	//count = sizeof(argv)/sizeof(char);
+	for (; *cur_argv != NULL; cur_argv++){
+	//count  = sizeof(argv[arg])/sizeof(char);
+	//**cur_argv = argv[arg];
+		for(char *cur_char = *cur_argv; *cur_char != '\0'; cur_char++){
+		letter = *cur_char;
 	
 	switch(letter){
 		case 'A':
